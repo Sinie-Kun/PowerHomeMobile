@@ -1,0 +1,34 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">PowerHome</string>
+    <string name="credits">Creado por Jojo</string>
+    <string name="IdVous">Conéctate a</string>
+    <string name="mail">E_mail</string>
+    <string name="CreaCompte">crear una cuenta</string>
+    <string name="prenom">Nombre</string>
+    <string name="nom">Apellido</string>
+    <string name="CreaNvxCompte">crear una nueva cuenta</string>
+    <string name="NouveauSurJumia">¿Eres nuevo en Jumia?</string>
+    <string name="recup_mdp">¿Ha olvidado su contraseña?</string>
+    <string name="connexion_facebook">conéctate a través de facebook</string>
+    <string name="Or">O</string>
+    <string name="ContinuerAvecFacebook">Continuar con Facebook</string>
+    <string name="Connexion">Conéctate a</string>
+    <string name="mdp">contraseña</string>
+    <string name="mobile">Móvil</string>
+    <string name="LearnApp">LearnApp</string>
+    <string name="Habitats">Hábitats</string>
+    <string name="open_drawer">abrir el menu</string>
+    <string name="close_drawer">cerrar el menu</string>
+
+
+    <string-array name="spinner_options">
+        <item>"+34"</item>
+        <item>"+33"</item>
+        <item>"+44"</item>
+    </string-array>
+
+    <string name="ListeHabitats">Lista de hábitats</string>
+    <string name="MonHabitat">Mi casa</string>
+    <string name="MesNotifications">Mis notificaciones</string>
+    <string name="MesPréférences">Mis preferencias</string>
+</resources>

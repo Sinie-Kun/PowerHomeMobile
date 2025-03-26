@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoginActivity"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:background="@color/black">
+
+            <ImageButton
+                android:layout_width="58dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/baseline_arrow_back_24"
+                android:background="@android:color/transparent"
+                app:tint="@color/white"/>
+
+            <TextView
+                android:layout_width="354dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:gravity="center_vertical"
+                android:text="@string/Connexion"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center_vertical"
+            android:text="@string/IdVous"
+            android:paddingStart="16dp"
+            android:textSize="15sp"
+            tools:ignore="RtlSymmetry" />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="40dp">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/baseline_email_24"
+                android:layout_gravity="center_vertical"
+                app:tint="@color/grey"
+                />
+
+            <EditText
+                android:id="@+id/ConnexionMail"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="17dp"
+                android:hint="@string/mail" />
+
+        </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/baseline_lock_24"
+            app:tint="@color/grey" />
+
+        <EditText
+            android:id="@+id/ConnexionMDP"
+            android:layout_width="325dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="17dp"
+            android:hint="@string/mdp" />
+
+    </FrameLayout>
+
+    <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginBottom="10dp"
+            android:text="@string/recup_mdp"
+            android:textColor="@color/blue" />
+
+        <Button
+            android:id="@+id/LoginButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/Connexion"
+            android:textColor="@color/white"
+            android:background="@drawable/squared_button"
+            app:backgroundTint="@android:color/holo_orange_dark"
+                     />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="199dp"
+                android:layout_height="match_parent"
+                android:gravity="center|end"
+                android:text="@string/NouveauSurJumia"
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="191dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="20dp"
+                android:text="@string/CreaCompte"
+                android:textColor="@color/blue"
+                android:textAlignment="textStart"
+                tools:ignore="RtlCompat" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:padding="15dp">
+
+            <View
+                android:layout_width="150dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/grey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/Or" />
+
+            <View
+                android:layout_width="150dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical | end"
+                android:background="@color/grey" />
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="34dp"
+                android:src="@drawable/facebooklogo"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="85dp"
+                />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ContinuerAvecFacebook"
+                android:textColor="@color/blue"
+                android:layout_gravity="end"
+                android:layout_marginEnd="65dp"/>
+
+        </FrameLayout>
+
+
+    </LinearLayout>
