@@ -89,6 +89,7 @@
     </FrameLayout>
 
     <Button
+            android:id="@+id/ForgotPassword"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -109,6 +110,27 @@
             app:backgroundTint="@android:color/holo_orange_dark"
                      />
 
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="369dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0"
+        android:background="#6D8A3A"
+        android:backgroundTintMode="src_over"
+        android:drawableTint="#FFFFFF"
+        android:shadowColor="#B32525"
+        android:text="login"
+        android:textAlignment="center"
+        android:textColor="#F6F2F2"
+        android:textColorHighlight="#EF5F5F"
+        android:textColorHint="#E25757"
+        android:textColorLink="#E7B02F"
+        android:textSize="17sp"
+        android:translationX="50px"
+        app:backgroundTint="@null"
+        app:rippleColor="#FFFFFF"
+        app:strokeColor="#902121"/>
+
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="45dp"
@@ -123,6 +145,7 @@
                 tools:ignore="RtlSymmetry" />
 
             <Button
+                android:id="@+id/Register"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="191dp"
                 android:layout_height="wrap_content"
