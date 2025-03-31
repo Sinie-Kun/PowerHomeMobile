@@ -1,74 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout
-     xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/main"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".LoginActivity"
-        android:orientation="vertical">
-
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="53dp"
-            android:background="@color/black">
-
-            <ImageButton
-                android:layout_width="58dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/baseline_arrow_back_24"
-                android:background="@android:color/transparent"
-                app:tint="@color/white"/>
-
-            <TextView
-                android:layout_width="354dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="end"
-                android:gravity="center_vertical"
-                android:text="@string/Connexion"
-                android:textColor="@color/white"
-                android:textSize="20sp"/>
-        </FrameLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:gravity="center_vertical"
-            android:text="@string/IdVous"
-            android:paddingStart="16dp"
-            android:textSize="15sp"
-            tools:ignore="RtlSymmetry" />
-
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginBottom="40dp">
-
-            <ImageView
-                android:layout_width="45dp"
-                android:layout_height="34dp"
-                android:layout_marginStart="20dp"
-                android:src="@drawable/baseline_email_24"
-                android:layout_gravity="center_vertical"
-                app:tint="@color/grey"
-                />
-
-            <EditText
-                android:id="@+id/ConnexionMail"
-                android:layout_width="325dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginEnd="17dp"
-                android:hint="@string/mail" />
-
-        </FrameLayout>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:orientation="vertical">
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp">
+        android:layout_height="53dp"
+        android:background="@color/black">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="58dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:background="@android:color/transparent"
+            app:tint="@color/white"
+            android:contentDescription="Retour"/>
+
+        <TextView
+            android:layout_width="354dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:gravity="center_vertical"
+            android:text="@string/Connexion"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="@string/IdVous"
+        android:paddingStart="16dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:textSize="15sp"
+        tools:ignore="RtlSymmetry" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/baseline_email_24"
+            android:layout_gravity="center_vertical"
+            app:tint="@color/grey"
+            android:contentDescription="Email icon"/>
+
+        <EditText
+            android:id="@+id/ConnexionMail"
+            android:layout_width="325dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="17dp"
+            android:hint="@string/mail"
+            android:inputType="textEmailAddress"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
 
         <ImageView
             android:layout_width="45dp"
@@ -76,7 +79,8 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="20dp"
             android:src="@drawable/baseline_lock_24"
-            app:tint="@color/grey" />
+            app:tint="@color/grey"
+            android:contentDescription="Password icon"/>
 
         <EditText
             android:id="@+id/ConnexionMDP"
@@ -84,128 +88,103 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginEnd="17dp"
-            android:hint="@string/mdp" />
-
+            android:hint="@string/mdp"
+            android:inputType="textPassword"/>
     </FrameLayout>
 
     <Button
-            android:id="@+id/ForgotPassword"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginBottom="10dp"
-            android:text="@string/recup_mdp"
-            android:textColor="@color/blue" />
-
-        <Button
-            android:id="@+id/LoginButton"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:text="@string/Connexion"
-            android:textColor="@color/white"
-            android:background="@drawable/squared_button"
-            app:backgroundTint="@android:color/holo_orange_dark"
-                     />
+        android:id="@+id/ForgotPassword"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginBottom="10dp"
+        android:text="@string/recup_mdp"
+        android:textColor="@color/blue" />
 
     <Button
         android:id="@+id/loginButton"
-        android:layout_width="369dp"
-        android:layout_height="match_parent"
-        android:layout_weight="0"
-        android:background="#6D8A3A"
-        android:backgroundTintMode="src_over"
-        android:drawableTint="#FFFFFF"
-        android:shadowColor="#B32525"
-        android:text="login"
-        android:textAlignment="center"
-        android:textColor="#F6F2F2"
-        android:textColorHighlight="#EF5F5F"
-        android:textColorHint="#E25757"
-        android:textColorLink="#E7B02F"
-        android:textSize="17sp"
-        android:translationX="50px"
-        app:backgroundTint="@null"
-        app:rippleColor="#FFFFFF"
-        app:strokeColor="#902121"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/Connexion"
+        android:textColor="@color/white"
+        android:background="@drawable/squared_button"
+        app:backgroundTint="@android:color/holo_orange_dark" />
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginBottom="20dp">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
 
-            <TextView
-                android:layout_width="199dp"
-                android:layout_height="match_parent"
-                android:gravity="center|end"
-                android:text="@string/NouveauSurJumia"
-                android:paddingEnd="10dp"
-                tools:ignore="RtlSymmetry" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginStart="20dp"
+            android:gravity="center"
+            android:text="@string/NouveauSurJumia"
+            android:paddingEnd="10dp"
+            tools:ignore="RtlSymmetry" />
 
-            <Button
-                android:id="@+id/Register"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="191dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginEnd="20dp"
-                android:text="@string/CreaCompte"
-                android:textColor="@color/blue"
-                android:textAlignment="textStart"
-                tools:ignore="RtlCompat" />
-
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:padding="15dp">
-
-            <View
-                android:layout_width="150dp"
-                android:layout_height="1dp"
-                android:layout_gravity="center_vertical"
-                android:background="@color/grey" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="@string/Or" />
-
-            <View
-                android:layout_width="150dp"
-                android:layout_height="1dp"
-                android:layout_gravity="center_vertical | end"
-                android:background="@color/grey" />
-
-        </FrameLayout>
-        <FrameLayout
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/Register"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp">
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="20dp"
+            android:text="@string/CreaCompte"
+            android:textColor="@color/blue"
+            android:textAlignment="textStart"
+            tools:ignore="RtlCompat" />
+    </FrameLayout>
 
-            <ImageView
-                android:layout_width="45dp"
-                android:layout_height="34dp"
-                android:src="@drawable/facebooklogo"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="85dp"
-                />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
 
-            <Button
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ContinuerAvecFacebook"
-                android:textColor="@color/blue"
-                android:layout_gravity="end"
-                android:layout_marginEnd="65dp"/>
+        <View
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:layout_gravity="start|center_vertical"
+            android:background="@color/grey" />
 
-        </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/Or" />
 
+        <View
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:layout_gravity="end|center_vertical"
+            android:background="@color/grey" />
+    </FrameLayout>
 
-    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="34dp"
+            android:src="@drawable/facebooklogo"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="85dp"
+            android:contentDescription="Facebook logo"/>
+
+        <Button
+            android:id="@+id/facebookButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ContinuerAvecFacebook"
+            android:textColor="@color/blue"
+            android:layout_gravity="end"
+            android:layout_marginEnd="65dp"/>
+    </FrameLayout>
+</LinearLayout>

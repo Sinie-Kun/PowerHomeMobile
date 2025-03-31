@@ -9,6 +9,7 @@
     tools:context=".RegisterActivity"
     android:orientation="vertical">
 
+    <!-- Barre de navigation avec bouton retour -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="53dp"
@@ -26,17 +27,17 @@
             android:layout_width="354dp"
             android:layout_height="match_parent"
             android:layout_gravity="end"
-            android:gravity=""
+            android:gravity="center"
             android:text="@string/CreaCompte"
             android:textColor="@color/white"
             android:textSize="20sp"/>
 
     </FrameLayout>
 
+    <!-- TextView pour la création de compte -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:gravity=""
         android:paddingStart="16dp"
         android:text="@string/CreaNvxCompte"
         android:textSize="17sp"
@@ -44,123 +45,100 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="53dp" />
 
+    <!-- EditText pour le prénom -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:layout_marginBottom="40dp"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="151dp"
-        android:gravity="">
-
-
+        android:layout_marginBottom="40dp">
         <EditText
+            android:id="@+id/editTextRegisterFirstName"
             android:layout_width="325dp"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginEnd="20dp"
-            android:hint="@string/prenom"
-            tools:layout_editor_absoluteX="46dp"
-            tools:layout_editor_absoluteY="150dp" />
-
+            android:hint="@string/prenom" />
         <ImageView
             android:layout_width="45dp"
             android:layout_marginStart="20dp"
             android:layout_height="34dp"
             android:layout_gravity="center_vertical"
             android:src="@drawable/person"
-            app:tint="@color/grey"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="156dp" />
+            app:tint="@color/grey"/>
     </FrameLayout>
 
+    <!-- EditText pour le nom -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:layout_marginBottom="40dp"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="200dp"
-        android:gravity="">
-
-
+        android:layout_marginBottom="40dp">
         <EditText
+            android:id="@+id/editTextRegisterLastName"
             android:layout_width="325dp"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginEnd="20dp"
-            android:hint="@string/nom"
-            tools:layout_editor_absoluteX="46dp"
-            tools:layout_editor_absoluteY="151dp" />
-
+            android:hint="@string/nom" />
         <ImageView
             android:layout_width="45dp"
             android:layout_marginStart="20dp"
             android:layout_height="34dp"
             android:layout_gravity="center_vertical"
-            app:tint="@color/grey"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="156dp" />
+            app:tint="@color/grey"/>
     </FrameLayout>
 
+    <!-- EditText pour l'email -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginBottom="40dp">
-
         <ImageView
             android:layout_width="45dp"
             android:layout_height="34dp"
             android:layout_marginStart="20dp"
             android:src="@drawable/baseline_email_24"
             android:layout_gravity="center_vertical"
-            app:tint="@color/grey"
-            />
-
+            app:tint="@color/grey"/>
         <EditText
+            android:id="@+id/editTextRegisterEmail"
             android:layout_width="325dp"
             android:layout_marginEnd="20dp"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:hint="@string/mail" />
-
+            android:hint="@string/mail"/>
     </FrameLayout>
 
+    <!-- EditText pour le mot de passe -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="45dp">
-
         <ImageView
             android:layout_width="45dp"
             android:layout_height="34dp"
             android:layout_marginStart="20dp"
             android:src="@drawable/baseline_lock_24"
             android:layout_gravity="center_vertical"
-            app:tint="@color/grey"
-            />
-
+            app:tint="@color/grey"/>
         <EditText
+            android:id="@+id/editTextRegisterPassword"
             android:layout_height="match_parent"
             android:layout_gravity="end"
             android:layout_width="325dp"
             android:layout_marginEnd="20dp"
             android:hint="@string/mdp"/>
-
     </FrameLayout>
 
+    <!-- FrameLayout pour le numéro de téléphone et le Spinner -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:layout_marginTop="40dp"
-        tools:ignore="ExtraText">
-
+        android:layout_marginTop="40dp">
         <ImageView
             android:layout_width="45dp"
             android:layout_height="34dp"
             android:src="@drawable/phone"
             android:layout_marginStart="20dp"
             android:layout_gravity="center_vertical"
-            app:tint="@color/grey"
-            />
-
+            app:tint="@color/grey"/>
         <Spinner
             android:id="@+id/dynamic_spinner"
             android:layout_width="125dp"
@@ -169,29 +147,41 @@
             android:layout_margin="65dp"
             android:dropDownWidth="match_parent"
             android:spinnerMode="dropdown"
-            android:entries="@array/spinner_options" />
-
+            android:entries="@array/spinner_options"/>
         <EditText
+            android:id="@+id/editTextRegisterPhoneNumber"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginEnd="20dp"
             android:hint="@string/mobile"/>
-
     </FrameLayout>
 
+    <!-- Bouton d'inscription -->
     <Button
+        android:id="@+id/registerButton"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="40dp"
-        android:text="@string/Connexion"
+        android:text="@string/CreaNvxCompte"
         android:textColor="@color/white"
         android:background="@drawable/squared_button"
-        app:backgroundTint="@android:color/holo_orange_dark"
-        />
+        app:backgroundTint="@android:color/holo_orange_dark"/>
 
+    <!-- Bouton Retour à Login en bas à droite du bouton d'inscription -->
+    <Button
+        android:id="@+id/backButtonRegister"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginEnd="20dp"
+        android:text="@string/Connexion"
+        android:textColor="@color/blue"
+        android:textAlignment="textStart"
+        tools:ignore="RtlCompat" />
 
 </LinearLayout>
